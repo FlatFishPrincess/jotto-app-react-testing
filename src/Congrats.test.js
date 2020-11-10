@@ -7,13 +7,15 @@ import Congrats from './Congrats';
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
+const defaultProps = { success: false };
 /**
  * Functional react component for congratulatory message.
  * @function
  * @returns {JSX.Element} - Rendered component (or null if 'success' prop is )
  */ 
 const setup = (props = {}) => {
-    return shallow(<Congrats {...props} />);
+    const setupProps = { ...defaultProps, ...props }
+    return shallow(<Congrats { ...setupProps } />);
 } 
 test('renders without error', () => {
     const wrapper = setup();

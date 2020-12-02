@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
  * @param {object} props - React props.
  * @returns {JSX.Element} - Rendered component (or null if 'success' prop is )
  */
-
 const Congrats = (props) => {
     if (props.success) {
         return (

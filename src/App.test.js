@@ -17,7 +17,7 @@ const setup = (secretWord = "party") => {
 
   const mockUserReducer = jest.fn()
     .mockReturnValue([
-      { secretWord },
+      { secretWord, language: 'en' },
       jest.fn()
     ]);
   React.useReducer = mockUserReducer;
